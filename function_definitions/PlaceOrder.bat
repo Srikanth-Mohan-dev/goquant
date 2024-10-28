@@ -1,0 +1,2 @@
+for /f "delims=" %%A in (.\temp\access_token.txt) do set ACCESS_TOKEN=%%A
+curl -X GET "https://test.deribit.com/api/v2/private/buy?instrument_name=ETH-PERPETUAL&amount=40&price=20&label=openorder" -H "Authorization: Bearer %ACCESS_TOKEN%" -H "Content-Type: application/json"
